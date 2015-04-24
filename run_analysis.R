@@ -1,8 +1,12 @@
+#set the directory to place where you have extracted zipped file
+#here we will create a merged file to host the merged data sets
 setwd("D:\\TRQ\\Resources\\R-Scripts\\R-Scripts\\gettingandcleaningdataassigment1")
 if(!file.exists("./merged")){dir.create("./merged")}
 
 #install.packages("plry")
 #library(plry)
+library(plyr)
+library(dplyr)
 
 #Reading features and activity Data
 activitylabel<-read.table("activity_labels.txt",header = FALSE)
